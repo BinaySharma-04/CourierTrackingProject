@@ -1,0 +1,95 @@
+
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+body{
+background-color: #333f45;
+}
+.heads{
+margin-bottom: -100px;
+height: 80vh;
+background:linear-gradient(to bottom, rgb(20, 24, 31), transparent) ,url('/images/manxe.jpg') no-repeat center center/cover;
+}
+h1{
+text-align: center;
+margin-top: 50px;
+color: #fff;
+font-size: 36px;
+font-weight: 500;
+}
+h6{
+text-align: center;
+color: #fff;
+font-weight: 100;
+margin-top: 5px;
+font-size: 20px;
+}
+.servicecontainer{
+width: 90%;
+display: flex;
+margin: auto;
+position: relative;
+justify-content: space-evenly;
+}
+@media (max-width: 768px) {
+.servicecontainer {
+display: flex;
+
+align-items: center;
+flex-direction: column; /* Stack services vertically on smaller screens */
+width: 100%; /* Adjust width for better spacing */
+margin: 30px 20px 20px -10px /* Center with margin on top and bottom */
+}
+.heads{
+height: 70vh;
+width: 100%;
+}
+.service {
+width: 100%; /* Make each service take full width */
+margin-left: 0; /* Remove left margin */
+margin-bottom: 40px; /* Add space between services */
+}
+}
+
+.service{
+border-radius: 10px;
+width: 75%;
+padding: 30px 00px 0px 20px;
+background-color: #55666F;
+text-align: justify;
+margin-left: 20px;
+color: #ffffff;
+}
+.design{
+height: 10px;
+width: 50px;
+background-color: #FDA929;
+float: right;
+padding: 0;
+}
+.service h2{
+margin-top: 30px;
+color: #FDA929;
+padding: 5px;
+text-align: center;
+}
+.service p{
+padding: 10px 20px 10px 10px;
+font-weight: 200;
+line-height: 1.3em;
+font-size: medium;
+}
+.service li{
+list-style: disc;
+padding: 10px 20px 10px 10px;
+margin-bottom: 10px;
+margin-left: 25px;
+line-height: 1.2em;    
+}
+.service li::marker{
+color: #FDA929;
+}

@@ -1,0 +1,119 @@
+header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+header img{
+    height: 70px;
+    width: 150px;
+}
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navigation a:hover{
+    color: #FDA929;
+}
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #FDA929;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+    }
+.navigation a:hover::after{
+    transform: scaleX(1);
+    }
+.navigation .btnlogin{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+.navigation .btnlogin:hover{
+    background-color: #FDA929;
+}
+.hamburger {
+    width: 40px;
+    height: 40px;
+    display: none; /* Hidden on larger screens */
+    font-size: 1.5em;
+    color: #ffffff;
+    background: #fda929;
+    border: none;
+    cursor: pointer;
+    transition: color var(--primary-color);
+}
+
+.hamburger:hover,
+.hamburger:focus {
+    color: var(--primary-color);
+}
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    header{
+         padding: 30px;
+    }
+    /* Hide Navigation Menu by Default */
+    .navigation {
+        position: absolute;
+        top: 70px; /* Adjust based on header height */
+        left: 0;
+        width: 100%;
+        background-color: var(--secondary-color);
+        flex-direction: column;
+        align-items: center;
+        max-height: 0; /* Hidden by default */
+        overflow: hidden;
+    }
+    
+    /* Show Navigation Menu When Active */
+    .navigation.active {
+        max-height: 500px; /* Arbitrary large value to show menu */
+    }
+    
+    /* Navigation Links on Mobile */
+    .navigation a {
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid var(--dark-gray);
+    }
+    
+    /* Remove first border-top */
+    .navigation a:first-child {
+        border-top: none;
+    }
+    
+    /* Login Button on Mobile */
+    .navigation .btnlogin {
+        width: 90%;
+        margin: 15px 0;
+    }
+}

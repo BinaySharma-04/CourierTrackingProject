@@ -1,0 +1,260 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+}
+
+/* Body */
+body {
+    background-color: #333F45;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+}
+/* Main Tracking Result Section */
+.trackingresult {
+    max-width: 90%;
+    background-color: #55666F;
+    margin: 150px auto 50px; /* Adjusted top margin for fixed header */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.trackingresult #heading {
+    background-color: #FDA929;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+.status {
+    padding: 20px;
+    line-height: 1.6;
+    background-color: #3F535E;
+    border-radius: 0 0 8px 8px;
+}
+
+.status h3 {
+    margin-bottom: 10px;
+}
+
+.status p {
+    margin-bottom: 10px;
+}
+
+.status span.deliverytime,
+.status span.shippeddate {
+    font-weight: bold;
+    color: #FFD700;
+}
+
+/* Progress Indicator */
+.track {
+    margin: 4em 0 2em;
+    overflow: hidden;
+}
+
+#progress {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#progress::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #ffffffb6;
+    z-index: 1;
+}
+
+#progress::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 0;
+    height: 5px;
+    background-color: #FDA929;
+    z-index: 2;
+    width: 0; /* Will be dynamically updated */
+    transition: width 0.5s ease;
+}
+
+#progress li {
+    position: relative;
+    z-index: 3;
+    flex: 1;
+    text-align: center;
+}
+
+#progress li::before {
+    content: '\2713';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    width: 40px;
+    height: 40px;
+    background-color: #fda929;
+    color: #ffffff;
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#progress li.active::before {
+    background-color: #ffffffc6;
+    color: #000000;
+}
+
+/* #progress li:last-child::before {
+    Special styling for the last step if needed
+} */
+
+@media (max-width: 768px) {
+    #progress {
+        max-width: 100%;
+        gap: 1em;
+    }
+
+    #progress li::before {
+        width: 30px;
+        height: 30px;
+        font-size: 1.2em;
+    }
+
+    #progress::before,
+    #progress::after {
+        top: 20px;
+    }
+}
+
+/* Progress Bar Dynamic Width */
+.track-complete {
+    width: 5%; /* Example value; adjust based on tracking status */
+}
+
+/* Lists Section */
+.lists {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2em 0 8em;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    gap: 0.5em;
+    flex: 1 1 100px;
+    text-align: center;
+}
+
+.list p {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.list img {
+    width: 50px;
+    height: auto;
+}
+
+/* Details Container */
+.detailsContainer {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.details {
+    flex: 1 1 300px;
+    background-color: #3F535E;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.details h3 {
+    background-color: #fda929;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.details label {
+    font-weight: bold;
+    display: block;
+    /* margin-bottom: 5px; */
+}
+
+.details span {
+    display: block;
+    margin-bottom: 10px;
+    color: #FFD700;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    .navigation a {
+        font-size: 1em;
+    }
+
+    .navigation .btnlogin {
+        font-size: 1em;
+    }
+
+    .trackingresult {
+        margin-top: 130px;
+        padding: 15px;
+    }
+
+    .lists {
+        gap: 2em;
+    }
+
+    .list img {
+        width: 40px;
+    }
+
+    .details {
+        flex: 1 1 100%;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    .quicklinks a,
+    .connect a {
+        font-size: 16px;
+    }
+}

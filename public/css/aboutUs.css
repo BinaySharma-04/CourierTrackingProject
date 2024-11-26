@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body{
+    background-color: #333f45;
+}
+.heads{
+    margin-bottom: -150px;
+    height: 80vh;
+    background: linear-gradient(to bottom, rgba(6, 27, 48, 0.818), rgba(111, 116, 121, 0.3)), url('/images/about.jpg') no-repeat center center/cover;
+}
+.heads h1{
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 36px ;
+    margin-top: 50px;
+    text-transform: uppercase;
+}
+.design{
+    height: 10px;
+    width: 50px;
+    background-color: #FDA929;
+    float: right;
+    padding: 0;
+}
+.heads p{
+    margin-top: 10px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#team {
+    text-align: center;
+    color: #fda929;
+}
+.row{
+    display: flex;
+    justify-content: center ;
+}
+.row h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.column{
+    /* flex: 33.33%; */
+    padding: 5px;
+}
+.column img{
+    height: 100px;
+    margin: 20px;
+    width: 100px;
+    border-radius: 50%;
+}
+.column pre{
+    text-align: center;
+    color: #ffffff;
+}
+.section1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: 50px auto; /* Center the section with appropriate margins */
+    gap: 20px;
+}
+.section2{
+    display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+            margin: 80px auto 50px;
+            padding: 20px;
+            gap: 20px; /* Consistent spacing between slots */
+            background-color: #333f45; /* Optional: Match background with body */
+            border-radius: 8px;
+
+}
+.sec{
+    background-color: #55666F;
+            padding: 25px 0px;
+            color: #ffffff;
+            flex: 1 1 30%; /* Allows the .sec elements to grow and shrink */
+            min-width: 250px; /* Ensures a minimum width for readability */
+            box-sizing: border-box;
+            text-align: justify;
+            border-radius: 8px; /* Optional: Adds rounded corners for aesthetics */
+            position: relative;
+}
+.sec h2{
+    text-align: center;
+    /* font-weight: 500; */
+    padding: 20px;
+    color: #FDA929;
+}
+.sec p{
+    padding: 25px;
+    font-weight: 100;
+    font-size: medium;
+}
+.slot2{
+    text-align: justify;
+            padding: 25px;
+            color: #ffffff;
+            background-color: #55666F;
+            border-radius: 8px;     
+}
+.slot1, .slot2 {
+            flex: 1 1 45%; /* Allows both slots to take up roughly half the container */
+            box-sizing: border-box;
+}
+.slot1 img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px; /* Optional: Rounded corners */
+        }
+.slot2 h2{
+    color: #FDA929;
+    font-weight: 500;
+    text-align: center;
+    padding: 20px;
+}
+.slot2 p{
+    font-weight: 200;
+    font-size: medium;
+}
+.slot1{
+    height: max-content;
+}
+
+@media (max-width: 1024px) {
+            .section1, .section2 {
+                width: 90%;
+            }
+        }
+
+@media (max-width: 768px) {
+            /* Section1 Adjustments */
+            .section1 {
+                flex-direction: column;
+                width: 90%;
+            }
+            .heads{
+                height: 50vh;
+            }
+            .heads h1{
+                font-size: 24px;
+            }
+            .heads p{
+                font-size: 16px;
+            }
+            .sec {
+                flex: 1 1 100%;
+                margin-left: 0; /* Remove left margin on mobile */
+            }
+
+            /* Section2 Adjustments */
+            .section2 {
+                flex-direction: column;
+                width: 90%;
+                margin: 40px auto 50px;
+            }
+
+            .slot1, .slot2 {
+                flex: 1 1 100%;
+            }
+
+            .slot2 {
+                padding: 15px;
+            }
+
+            /* Adjust the .design positioning if necessary */
+            .sec .design {
+                right: 2    0px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section1, .section2 {
+                width: 95%;
+            }
+            .sec h2, .slot2 h2 {
+                font-size: 1.5em;
+            }
+
+            .sec p, .slot2 p {
+                font-size: 1em;
+            }
+        }
+
+/* Team Section Styles */
+#team {
+    text-align: center;
+    color: #fda929;
+    margin: 40px 0 20px 0; /* Added margin for spacing */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+    justify-content: center;
+    gap: 20px; /* Adds space between columns */
+    width: 80%;
+    margin: 0 auto; /* Centers the row */
+}
+
+.column {
+    background-color: #55666F; /* Optional: Background for better visibility */
+    padding: 20px;
+    border-radius: 8px; /* Optional: Rounded corners */
+    text-align: center;
+    flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
+    max-width: 300px; /* Limits the maximum width */
+    box-sizing: border-box;
+}
+
+.column img {
+    width: 150px; /* Relative sizing */
+    height: 150px; /* Maintains aspect ratio with square images */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    margin: 0 auto 15px auto; /* Centers the image and adds bottom margin */
+    border-radius: 50%; /* Makes the image circular */
+}
+
+.role {
+    color: #ffffff;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .row {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .row {
+        /* flex-direction: column; */
+        align-items: center;
+        width: 90%;
+    }
+
+    .column {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .column img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .role {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .row {
+        width: 95%;
+    }
+
+    .column img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .role {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    .section1 {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .sec {
+        flex: 1 1 100%;
+        margin-left: 0; /* Remove left margin on mobile */
+    }
+}
+@media (max-width: 768px) {
+    .section2 {
+        flex-direction: column;
+        width: 90%;
+        margin: 40px auto 50px;
+    }
+
+    .slot1, .slot2 {
+        flex: 1 1 100%;
+    }
+
+    .slot2 {
+        padding: 15px;
+    }
+}

@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #333f45;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.login-container{
+    position: relative;
+    width: 30%;
+    margin: 40px auto;
+    padding: 20px;
+    height: 440px;
+    background-color: #d3e9f4;
+    border: 2px solid #FDA929;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.container1{
+    border:2px solid #FDA929;
+    padding: 30px;
+    border-radius: 10px;
+}
+/* .login-container .login-container1{
+    width: 100%;
+    padding: 40px;
+} */
+.container1 h2{
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #FDA929;
+    margin: 30px 0;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+   top: -5px;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: white;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #FDA929;
+    line-height: 57px;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    background: #FDA929;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+    align-items: center;
+}
+.btn:hover{
+    background-color: white;
+    color: #FDA929;
+    transition: .5s;
+}

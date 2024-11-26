@@ -1,0 +1,148 @@
+
+
+:root {
+    --primary-color: #fda929;
+    --secondary-color: #333f45;
+    --dark-gray: #4C5B64;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: var(--secondary-color);
+}
+.heads{
+    background: linear-gradient(to bottom, rgba(33, 33, 34, 0.818), rgba(35, 49, 67, 0.73)), url('/images/oeee.jpg') no-repeat center center/cover;
+    height: 75vh;
+    margin-bottom: -150px;
+}
+
+.heads h1{
+    margin-top: 30px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.5em;
+}
+.heads h6{
+    text-align: center;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 300;
+}
+.container{
+position: relative;
+width: 70%;
+max-width: 1200px; 
+margin: 60px auto 40px;
+display: flex;
+justify-content: center;
+border: 2px solid var(--secondary-color);
+border-radius: 20px;
+overflow: hidden;
+}
+
+
+
+
+.contactform{
+    /* position:relative; */
+    color: #333f45;
+    width: 50%;
+    background-color: rgba(237,166,58,0.8);
+    height: auto;
+    padding: 40px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.contactform h2{
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+}
+.contactform h4{
+    margin: 10px 0px 10px 0px;
+    font-weight: 300;
+    color: #fff;
+}
+.contactform label{
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #fff;
+}
+.contactform input, .contactform textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+}
+.contactform input{
+    height: 40px;
+}
+.contactform textarea{
+    resize: vertical;
+}
+.contactform button{
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.contactform button:hover{
+    background-color: #ffa218;
+}
+.contactimage{
+    position:relative;
+    width: 50%;
+    padding: 40px;
+    color: #ffffff;
+    border: 2px solid var(--dark-gray);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: var(--dark-gray);
+}
+.contactimage h2{
+    color: var(--primary-color);
+    text-align: center;
+    font-weight: 700;
+}
+.contactimage ul{
+    list-style: none;
+    padding: 0;
+}
+.contactimage li{
+    font-weight: 700;
+    padding: 10px 0;
+}
+.contactimage dd{
+    font-weight: 100;
+    font-style: italic;
+    font-size: smaller;
+    margin-left: 20px;
+}
+.contactimage li::before{
+    content: "\2022"; /* Bullet point */
+    color: var(--primary-color);
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+.p{
+    margin-top: 30px;
+    font-weight: 600;
+    color: #fff;
+}
+.p p{
+    margin-top: 10px;
+}
+
